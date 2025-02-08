@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import { Scissors } from "lucide-react";
 
 export const Hero = () => {
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/+5511999999999?text=Olá! Gostaria de agendar um horário", "_blank");
+  };
+
   return (
     <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-[#FDE1D3] to-white px-4">
       <div className="max-w-4xl mx-auto text-center">
@@ -39,7 +43,10 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <button className="inline-flex items-center px-6 py-3 bg-[#D946EF] text-white rounded-lg hover:bg-[#D946EF]/90 transition-colors duration-200">
+          <button 
+            onClick={handleWhatsAppClick}
+            className="inline-flex items-center px-6 py-3 bg-[#D946EF] text-white rounded-lg hover:bg-[#D946EF]/90 transition-colors duration-200"
+          >
             Agende seu Horário
             <Scissors className="ml-2 h-4 w-4" />
           </button>
@@ -48,3 +55,4 @@ export const Hero = () => {
     </section>
   );
 };
+
