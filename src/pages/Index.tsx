@@ -20,25 +20,25 @@ const Index = () => {
           transition={{ duration: 0.5 }}
           className="flex-1"
         >
-          <section id="home" className="scroll-mt-20 bg-gradient-to-b from-primary-50 to-white">
+          <section id="home" className="scroll-mt-20">
             <Hero />
           </section>
-          <section id="benefits" className="scroll-mt-20 bg-gradient-to-b from-white to-secondary/30">
+          <section id="benefits" className="scroll-mt-20 bg-gradient-to-b from-secondary/50 to-primary-100/30">
             <Benefits />
           </section>
-          <section id="services" className="scroll-mt-20 bg-gradient-to-b from-secondary/30 to-primary-50">
+          <section id="services" className="scroll-mt-20 bg-gradient-to-b from-primary-100/30 to-secondary/40">
             <Pricing />
           </section>
-          <section id="testimonials" className="scroll-mt-20 bg-gradient-to-b from-primary-50 to-white">
+          <section id="testimonials" className="scroll-mt-20 bg-gradient-to-b from-secondary/40 to-primary-50/50">
             <Testimonials />
           </section>
-          <section id="brands" className="scroll-mt-20 bg-gradient-to-b from-white to-secondary/20">
+          <section id="brands" className="scroll-mt-20 bg-gradient-to-b from-primary-50/50 to-secondary/30">
             <Brands />
           </section>
-          <section id="faq" className="scroll-mt-20 bg-gradient-to-b from-secondary/20 to-primary-100">
+          <section id="faq" className="scroll-mt-20 bg-gradient-to-b from-secondary/30 to-primary-100/40">
             <FAQ />
           </section>
-          <section className="bg-accent/90 text-white">
+          <section className="bg-accent/80 text-white">
             <CTA />
           </section>
         </motion.main>
