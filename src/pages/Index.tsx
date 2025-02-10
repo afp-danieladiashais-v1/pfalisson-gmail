@@ -20,25 +20,27 @@ const Index = () => {
           transition={{ duration: 0.5 }}
           className="flex-1"
         >
-          <section id="home" className="scroll-mt-20">
+          <section id="home" className="scroll-mt-20 bg-gradient-to-b from-secondary/20 to-white">
             <Hero />
           </section>
-          <section id="benefits" className="scroll-mt-20">
+          <section id="benefits" className="scroll-mt-20 bg-gradient-to-b from-white to-primary/5">
             <Benefits />
           </section>
-          <section id="services" className="scroll-mt-20">
+          <section id="services" className="scroll-mt-20 bg-gradient-to-b from-primary/5 to-secondary/10">
             <Pricing />
           </section>
-          <section id="testimonials" className="scroll-mt-20">
+          <section id="testimonials" className="scroll-mt-20 bg-gradient-to-b from-secondary/10 to-white">
             <Testimonials />
           </section>
-          <section id="brands" className="scroll-mt-20">
+          <section id="brands" className="scroll-mt-20 bg-white">
             <Brands />
           </section>
-          <section id="faq" className="scroll-mt-20">
+          <section id="faq" className="scroll-mt-20 bg-gradient-to-b from-white to-accent/5">
             <FAQ />
           </section>
-          <CTA />
+          <section className="bg-accent text-white">
+            <CTA />
+          </section>
         </motion.main>
       </div>
     </LazyMotion>
