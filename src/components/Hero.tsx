@@ -1,57 +1,44 @@
 
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Scissors } from "lucide-react";
 
-export const Hero = () => {
-  const handleWhatsAppClick = () => {
-    window.open("https://wa.me/+5511999999999?text=Olá! Gostaria de agendar um horário", "_blank");
-  };
+const Hero = () => {
+  const whatsappNumber = "5534999659886";
+  const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar um horário.");
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
-    <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-[#FDE1D3] to-white px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        <motion.span
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-[#FFDEE2]/20 text-primary rounded-full"
-        >
-          Realce sua beleza natural
-        </motion.span>
-        
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-4xl md:text-6xl font-bold mb-6 text-primary"
-        >
-          Daniela Dias Hair
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-lg text-secondary mb-8 max-w-2xl mx-auto"
-        >
-          Especialistas em transformar seu visual com as mais modernas técnicas de mechas, 
-          coloração e alisamentos. Realce sua beleza com nossos serviços exclusivos.
-        </motion.p>
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-neutral-50 to-secondary/20">
+      <div className="absolute inset-0 bg-[url('/hero-bg.jpg')] bg-cover bg-center opacity-10" />
+      <div className="container mx-auto px-4 z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
         >
-          <button 
-            onClick={handleWhatsAppClick}
-            className="inline-flex items-center px-6 py-3 bg-[#D946EF] text-white rounded-lg hover:bg-[#D946EF]/90 transition-colors duration-200"
+          <h1 className="text-4xl md:text-6xl font-bold text-neutral-800 mb-6">
+            Transforme seu Visual
+            <span className="text-6xl md:text-8xl text-primary block mt-2">Daniela Dias Hair</span>
+          </h1>
+          <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto mb-8">
+            <span className="text-2xl md:text-3xl font-semibold">
+              Especialista em mechas, ruivos, colorações, alisamentos e tratamentos capilares.
+            </span>
+            <br />
+            Realce sua beleza natural com nossos tratamentos exclusivos.
+          </p>
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-primary-hover text-white font-semibold py-6 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
+            onClick={() => window.open(whatsappUrl, "_blank")}
           >
             Agende seu Horário
-            <Scissors className="ml-2 h-4 w-4" />
-          </button>
+          </Button>
         </motion.div>
       </div>
     </section>
   );
 };
+
+export default Hero;
