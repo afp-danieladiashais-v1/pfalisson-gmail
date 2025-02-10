@@ -13,9 +13,19 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
       screens: {
-        "2xl": "1400px",
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1400px',
       },
     },
     extend: {
@@ -28,6 +38,16 @@ export default {
         primary: {
           DEFAULT: "#C6934B",
           hover: "#B48339",
+          50: "#F9F4EC",
+          100: "#F3E9D9",
+          200: "#E8D3B5",
+          300: "#DCBD91",
+          400: "#D1A76D",
+          500: "#C6934B",
+          600: "#B48339",
+          700: "#8F682E",
+          800: "#6A4D22",
+          900: "#453216",
         },
         secondary: {
           DEFAULT: "#F5DEB3",

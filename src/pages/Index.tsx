@@ -7,41 +7,42 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import TopBar from "@/components/TopBar";
 import Brands from "@/components/Brands";
-import { motion } from "framer-motion";
+import { motion, LazyMotion, domAnimation } from "framer-motion";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <TopBar />
-      <motion.main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="flex-1"
-      >
-        <section id="home">
-          <Hero />
-        </section>
-        <section id="benefits">
-          <Benefits />
-        </section>
-        <section id="services">
-          <Pricing />
-        </section>
-        <section id="testimonials">
-          <Testimonials />
-        </section>
-        <section id="brands">
-          <Brands />
-        </section>
-        <section id="faq">
-          <FAQ />
-        </section>
-        <CTA />
-      </motion.main>
-    </div>
+    <LazyMotion features={domAnimation}>
+      <div className="min-h-screen flex flex-col">
+        <TopBar />
+        <motion.main
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="flex-1"
+        >
+          <section id="home" className="scroll-mt-20">
+            <Hero />
+          </section>
+          <section id="benefits" className="scroll-mt-20">
+            <Benefits />
+          </section>
+          <section id="services" className="scroll-mt-20">
+            <Pricing />
+          </section>
+          <section id="testimonials" className="scroll-mt-20">
+            <Testimonials />
+          </section>
+          <section id="brands" className="scroll-mt-20">
+            <Brands />
+          </section>
+          <section id="faq" className="scroll-mt-20">
+            <FAQ />
+          </section>
+          <CTA />
+        </motion.main>
+      </div>
+    </LazyMotion>
   );
 };
 
 export default Index;
-
