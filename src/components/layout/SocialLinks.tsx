@@ -13,6 +13,7 @@ const SocialLinks: FC = () => {
           alt="Instagram"
           className="w-5 h-5"
           loading="lazy"
+          style={{ color: "currentColor" }}
         />
       ) : (
         <svg
@@ -45,6 +46,7 @@ const SocialLinks: FC = () => {
           alt="TikTok"
           className="w-5 h-5"
           loading="lazy"
+          style={{ color: "currentColor" }}
         />
       ) : (
         <svg
