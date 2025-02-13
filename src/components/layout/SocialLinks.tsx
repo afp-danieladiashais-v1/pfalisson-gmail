@@ -1,9 +1,12 @@
 
 import { FC } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useId } from "react";
 
 const SocialLinks: FC = () => {
   const isMobile = useIsMobile();
+  const instagramGradientId = useId();
+  const tiktokGradientId = useId();
 
   const socialLinks = [
     {
@@ -13,9 +16,17 @@ const SocialLinks: FC = () => {
           viewBox="0 0 24 24" 
           className="w-5 h-5"
           aria-hidden="true"
+          style={{ isolation: "isolate" }}
         >
           <defs>
-            <radialGradient id="instagramGradient" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse">
+            <radialGradient 
+              id={instagramGradientId} 
+              cx="19.38" 
+              cy="42.035" 
+              r="44.899" 
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="matrix(1 0 0 1 0 0)"
+            >
               <stop offset="0" stopColor="#fd5"/>
               <stop offset=".328" stopColor="#ff543e"/>
               <stop offset=".348" stopColor="#fc5245"/>
@@ -26,7 +37,7 @@ const SocialLinks: FC = () => {
             </radialGradient>
           </defs>
           <path 
-            fill="url(#instagramGradient)" 
+            fill={`url(#${instagramGradientId})`}
             d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
           />
         </svg>
@@ -59,16 +70,19 @@ const SocialLinks: FC = () => {
         <svg
           viewBox="0 0 24 24"
           className="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
           aria-hidden="true"
+          style={{ isolation: "isolate" }}
         >
-          <path d="M21 8v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5Z" />
-          <path d="M10 12a3 3 0 1 1 3 3V4" />
-          <path d="M16 8a4 4 0 0 1 4 4" />
+          <defs>
+            <linearGradient id={tiktokGradientId} x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#69C9D0" />
+              <stop offset="100%" stopColor="#EE1D52" />
+            </linearGradient>
+          </defs>
+          <path
+            fill={`url(#${tiktokGradientId})`}
+            d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 4.36-3.74V10.2a6.32 6.32 0 0 0-5.39 10.63A6.33 6.33 0 0 0 16 16.61V8.69a8.16 8.16 0 0 0 4.77 1.52V6.79a4.85 4.85 0 0 1-1.18-.1z"
+          />
         </svg>
       ) : (
         <svg
