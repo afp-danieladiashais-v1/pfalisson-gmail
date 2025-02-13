@@ -8,13 +8,20 @@ const SocialLinks: FC = () => {
   const socialLinks = [
     {
       icon: isMobile ? (
-        <img
-          src="/icons/instagram-icon.svg"
-          alt="Instagram"
+        <svg
+          viewBox="0 0 24 24"
           className="w-5 h-5"
-          loading="lazy"
-          style={{ color: "currentColor" }}
-        />
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <rect width="20" height="20" x="2" y="2" rx="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+        </svg>
       ) : (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -41,13 +48,20 @@ const SocialLinks: FC = () => {
     },
     {
       icon: isMobile ? (
-        <img
-          src="/icons/tiktok-icon.svg"
-          alt="TikTok"
+        <svg
+          viewBox="0 0 24 24"
           className="w-5 h-5"
-          loading="lazy"
-          style={{ color: "currentColor" }}
-        />
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M21 8v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5Z" />
+          <path d="M10 12a3 3 0 1 1 3 3V4" />
+          <path d="M16 8a4 4 0 0 1 4 4" />
+        </svg>
       ) : (
         <svg
           xmlns="http://www.w3.org/2000/svg"
