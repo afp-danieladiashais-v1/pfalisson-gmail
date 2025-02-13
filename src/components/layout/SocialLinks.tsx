@@ -1,5 +1,4 @@
-
-import { FC } from "react";
+import React, { FC } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const SocialLinks: FC = () => {
@@ -12,11 +11,8 @@ const SocialLinks: FC = () => {
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 24 24" 
           className="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          fill="currentColor"
+          stroke="none"
           aria-hidden="true"
         >
           <rect width="20" height="20" x="2" y="2" rx="5" />
@@ -50,13 +46,11 @@ const SocialLinks: FC = () => {
     {
       icon: isMobile ? (
         <svg
+          xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           className="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          fill="currentColor"
+          stroke="none"
           aria-hidden="true"
         >
           <path d="M21 8v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5Z" />

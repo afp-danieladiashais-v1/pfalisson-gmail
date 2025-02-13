@@ -1,14 +1,13 @@
-
+import React from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 import SocialLinks from "./SocialLinks";
 import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
 
 const TopBar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const whatsappNumber = "5534999659886";
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar um horário.");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;

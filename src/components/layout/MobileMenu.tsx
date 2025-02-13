@@ -1,17 +1,11 @@
-
-import { FC } from "react";
+import React from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import NavLinks from "./NavLinks";
 import SocialLinks from "./SocialLinks";
 
-interface MobileMenuProps {
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
-}
-
-const MobileMenu: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
+const MobileMenu = ({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (value: boolean) => void }) => {
   const whatsappNumber = "5534999659886";
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar um horário.");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
