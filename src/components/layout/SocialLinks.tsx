@@ -1,11 +1,9 @@
+
 import { FC } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { useId } from "react";
 
 const SocialLinks: FC = () => {
   const isMobile = useIsMobile();
-  const instagramGradientId = useId();
-  const tiktokGradientId = useId();
 
   const socialLinks = [
     {
@@ -71,12 +69,6 @@ const SocialLinks: FC = () => {
           viewBox="0 0 38.51 38.51"
           className="w-5 h-5"
         >
-          <defs>
-            <linearGradient id="tiktok-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#69C9D0" />
-              <stop offset="100%" stopColor="#EE1D52" />
-            </linearGradient>
-          </defs>
           <rect width="38.51" height="38.51" fill="currentColor" rx="6.97" ry="6.97" />
           <path
             fill="#fff"
@@ -151,3 +143,4 @@ const SocialLinks: FC = () => {
 };
 
 export default SocialLinks;
+
