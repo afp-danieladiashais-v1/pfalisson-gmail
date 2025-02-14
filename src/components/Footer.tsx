@@ -1,5 +1,5 @@
 
-import { Instagram, Star, Youtube, MessageCircle } from "lucide-react";
+import { Instagram, Star, Youtube, MessageCircle, Sparkles, Palette, Shield, Heart, Clock, Zap } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,10 +9,19 @@ const Footer = () => {
           <div>
             <h3 className="text-3xl font-serif font-bold text-primary-600 mb-6">Daniela Dias Hair</h3>
             <p className="text-primary-500 mb-4">Transformando visual e autoestima</p>
-            <div className="flex flex-wrap gap-2">
-              <span className="text-sm bg-primary-50 text-primary-600 px-3 py-1 rounded-full">Especialista em Mechas</span>
-              <span className="text-sm bg-primary-50 text-primary-600 px-3 py-1 rounded-full">Coloração Premium</span>
-              <span className="text-sm bg-primary-50 text-primary-600 px-3 py-1 rounded-full">Ruivos Naturais</span>
+            <div className="flex flex-wrap gap-4">
+              <div className="flex items-center gap-1 text-primary-500">
+                <Sparkles className="w-4 h-4" />
+                <span className="text-sm">Especialista em Mechas</span>
+              </div>
+              <div className="flex items-center gap-1 text-primary-500">
+                <Palette className="w-4 h-4" />
+                <span className="text-sm">Coloração Premium</span>
+              </div>
+              <div className="flex items-center gap-1 text-primary-500">
+                <Heart className="w-4 h-4" />
+                <span className="text-sm">Ruivos Naturais</span>
+              </div>
             </div>
           </div>
           <div>
@@ -29,9 +38,15 @@ const Footer = () => {
             <p className="text-primary-500 mt-4">
               Agende sua transformação e descubra como podemos realçar sua beleza natural
             </p>
-            <div className="flex flex-wrap gap-2 mt-4">
-              <span className="text-sm bg-primary-50 text-primary-600 px-3 py-1 rounded-full">Atendimento VIP</span>
-              <span className="text-sm bg-primary-50 text-primary-600 px-3 py-1 rounded-full">Resultados Garantidos</span>
+            <div className="flex flex-wrap gap-4 mt-4">
+              <div className="flex items-center gap-1 text-primary-500">
+                <Star className="w-4 h-4" />
+                <span className="text-sm">Atendimento VIP</span>
+              </div>
+              <div className="flex items-center gap-1 text-primary-500">
+                <Shield className="w-4 h-4" />
+                <span className="text-sm">Resultados Garantidos</span>
+              </div>
             </div>
           </div>
           <div>
@@ -50,9 +65,15 @@ const Footer = () => {
             <p className="text-primary-500">
               Siga-nos para inspirações, dicas e resultados incríveis
             </p>
-            <div className="flex flex-wrap gap-2 mt-4">
-              <span className="text-sm bg-primary-50 text-primary-600 px-3 py-1 rounded-full">Antes e Depois</span>
-              <span className="text-sm bg-primary-50 text-primary-600 px-3 py-1 rounded-full">Dicas de Cabelo</span>
+            <div className="flex flex-wrap gap-4 mt-4">
+              <div className="flex items-center gap-1 text-primary-500">
+                <Clock className="w-4 h-4" />
+                <span className="text-sm">Antes e Depois</span>
+              </div>
+              <div className="flex items-center gap-1 text-primary-500">
+                <Zap className="w-4 h-4" />
+                <span className="text-sm">Dicas de Cabelo</span>
+              </div>
             </div>
           </div>
         </div>
