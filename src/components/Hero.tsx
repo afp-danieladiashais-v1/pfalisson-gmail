@@ -1,5 +1,5 @@
 
-import { Sparkles, Magic, Star, Heart } from "lucide-react";
+import { Sparkles, Palette, Star, Heart } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -27,7 +27,7 @@ const Hero = () => {
             <span className="text-sm">Expertise em Mechas</span>
           </div>
           <div className="flex items-center gap-1 text-primary-500">
-            <Magic className="w-4 h-4" />
+            <Palette className="w-4 h-4" />
             <span className="text-sm">Coloração Profissional</span>
           </div>
           <div className="flex items-center gap-1 text-primary-500">
