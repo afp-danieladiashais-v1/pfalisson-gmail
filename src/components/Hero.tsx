@@ -1,4 +1,6 @@
 
+import { Sparkles, Magic, Star, Heart } from "lucide-react";
+
 const Hero = () => {
   return (
     <section className="relative pt-40 pb-24 px-4">
@@ -19,11 +21,23 @@ const Hero = () => {
         <p className="text-lg md:text-xl text-primary-400 mb-12 max-w-3xl mx-auto leading-relaxed">
           Especialistas em técnicas exclusivas que transformam seu cabelo com respeito à sua natureza e personalidade
         </p>
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <span className="text-xs font-medium px-3 py-1 rounded-full bg-rose-light text-primary-600 border border-rose-dark/20">#ExpertiseEmMechas</span>
-          <span className="text-xs font-medium px-3 py-1 rounded-full bg-rose-light text-primary-600 border border-rose-dark/20">#ColoraçãoProfissional</span>
-          <span className="text-xs font-medium px-3 py-1 rounded-full bg-rose-light text-primary-600 border border-rose-dark/20">#TratamentosAvançados</span>
-          <span className="text-xs font-medium px-3 py-1 rounded-full bg-rose-light text-primary-600 border border-rose-dark/20">#BelezaAutêntica</span>
+        <div className="flex flex-wrap justify-center gap-6 mb-12">
+          <div className="flex items-center gap-1 text-primary-500">
+            <Sparkles className="w-4 h-4" />
+            <span className="text-sm">Expertise em Mechas</span>
+          </div>
+          <div className="flex items-center gap-1 text-primary-500">
+            <Magic className="w-4 h-4" />
+            <span className="text-sm">Coloração Profissional</span>
+          </div>
+          <div className="flex items-center gap-1 text-primary-500">
+            <Star className="w-4 h-4" />
+            <span className="text-sm">Tratamentos Avançados</span>
+          </div>
+          <div className="flex items-center gap-1 text-primary-500">
+            <Heart className="w-4 h-4" />
+            <span className="text-sm">Beleza Autêntica</span>
+          </div>
         </div>
         <a
           href="https://wa.me/5534999659886"

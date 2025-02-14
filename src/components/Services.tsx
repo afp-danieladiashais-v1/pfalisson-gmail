@@ -1,42 +1,66 @@
 
-import { Scissors, Sparkles, Palette, Wand2, Heart, Zap, Crown } from "lucide-react";
+import { Scissors, Sparkles, Palette, Wand2, Heart, Zap, Crown, Star, Shield, Droplet, Gauge, Clock, Smile } from "lucide-react";
 
 const services = [
   {
     title: "Mechas Exclusivas",
     description: "Design personalizado de mechas que realçam sua beleza natural. Técnicas inovadoras para um resultado único e duradouro.",
     icon: Sparkles,
-    keywords: "Iluminação natural, Dimensão, Personalização"
+    keywords: [
+      { text: "Iluminação natural", icon: Star },
+      { text: "Dimensão", icon: Palette },
+      { text: "Personalização", icon: Heart }
+    ]
   },
   {
     title: "Coloração Premium",
     description: "Cores vibrantes e duradouras com produtos de alta performance. Transforme seu visual com tecnologia de ponta.",
     icon: Palette,
-    keywords: "Cobertura perfeita, Brilho intenso, Proteção"
+    keywords: [
+      { text: "Cobertura perfeita", icon: Shield },
+      { text: "Brilho intenso", icon: Sparkles },
+      { text: "Proteção", icon: Heart }
+    ]
   },
   {
     title: "Ruivos Deslumbrantes",
     description: "Especialistas em tons ruivos que harmonizam com seu tom de pele. Do cobre suave ao vermelho intenso.",
     icon: Heart,
-    keywords: "Tons personalizados, Durabilidade, Vivacidade"
+    keywords: [
+      { text: "Tons personalizados", icon: Palette },
+      { text: "Durabilidade", icon: Clock },
+      { text: "Vivacidade", icon: Sparkles }
+    ]
   },
   {
     title: "Alisamento Inteligente",
     description: "Técnicas avançadas de alisamento que mantêm a saúde dos fios. Resultado natural com máximo cuidado.",
     icon: Wand2,
-    keywords: "Sem formol, Redução de volume, Proteção"
+    keywords: [
+      { text: "Sem formol", icon: Shield },
+      { text: "Redução de volume", icon: Droplet },
+      { text: "Proteção", icon: Heart }
+    ]
   },
   {
     title: "Tratamentos VIP",
     description: "Protocolos exclusivos de tratamento para recuperação e fortalecimento dos fios. Resultados visíveis desde a primeira sessão.",
     icon: Crown,
-    keywords: "Hidratação profunda, Reconstrução, Nutrição"
+    keywords: [
+      { text: "Hidratação profunda", icon: Droplet },
+      { text: "Reconstrução", icon: Shield },
+      { text: "Nutrição", icon: Heart }
+    ]
   },
   {
     title: "Finalização Expert",
     description: "Técnicas profissionais de finalização que realçam seu estilo. Aprenda a manter o visual do salão em casa.",
     icon: Zap,
-    keywords: "Durabilidade, Praticidade, Estilo"
+    keywords: [
+      { text: "Durabilidade", icon: Clock },
+      { text: "Praticidade", icon: Star },
+      { text: "Estilo", icon: Smile }
+    ]
   }
 ];
 
@@ -56,14 +80,15 @@ const Services = () => {
               <service.icon className="w-12 h-12 text-primary-500 mb-6" />
               <h3 className="text-2xl font-semibold mb-4 text-primary-600">{service.title}</h3>
               <p className="text-primary-500 mb-4">{service.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {service.keywords.split(', ').map((keyword, idx) => (
-                  <span 
+              <div className="flex flex-wrap gap-3">
+                {service.keywords.map((keyword, idx) => (
+                  <div 
                     key={idx} 
-                    className="text-xs font-medium px-3 py-1 rounded-full bg-rose-light text-primary-600 border border-rose-dark/20"
+                    className="flex items-center gap-1 text-primary-500"
                   >
-                    {keyword}
-                  </span>
+                    <keyword.icon className="w-4 h-4" />
+                    <span className="text-sm">{keyword.text}</span>
+                  </div>
                 ))}
               </div>
             </div>
