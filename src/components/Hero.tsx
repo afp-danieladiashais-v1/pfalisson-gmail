@@ -20,10 +20,10 @@ const Hero = () => {
           Especialistas em técnicas exclusivas que transformam seu cabelo com respeito à sua natureza e personalidade
         </p>
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <span className="text-sm bg-primary-50/80 text-primary-700 px-4 py-2 rounded-full font-medium backdrop-blur-sm hover:bg-primary-100/80 transition-all duration-300 cursor-default">#ExpertiseEmMechas</span>
-          <span className="text-sm bg-primary-50/80 text-primary-700 px-4 py-2 rounded-full font-medium backdrop-blur-sm hover:bg-primary-100/80 transition-all duration-300 cursor-default">#ColoraçãoProfissional</span>
-          <span className="text-sm bg-primary-50/80 text-primary-700 px-4 py-2 rounded-full font-medium backdrop-blur-sm hover:bg-primary-100/80 transition-all duration-300 cursor-default">#TratamentosAvançados</span>
-          <span className="text-sm bg-primary-50/80 text-primary-700 px-4 py-2 rounded-full font-medium backdrop-blur-sm hover:bg-primary-100/80 transition-all duration-300 cursor-default">#BelezaAutêntica</span>
+          <span className="text-xs font-medium px-3 py-1 rounded-full bg-rose-light text-primary-600 border border-rose-dark/20">#ExpertiseEmMechas</span>
+          <span className="text-xs font-medium px-3 py-1 rounded-full bg-rose-light text-primary-600 border border-rose-dark/20">#ColoraçãoProfissional</span>
+          <span className="text-xs font-medium px-3 py-1 rounded-full bg-rose-light text-primary-600 border border-rose-dark/20">#TratamentosAvançados</span>
+          <span className="text-xs font-medium px-3 py-1 rounded-full bg-rose-light text-primary-600 border border-rose-dark/20">#BelezaAutêntica</span>
         </div>
         <a
           href="https://wa.me/5534999659886"

@@ -58,7 +58,10 @@ const Services = () => {
               <p className="text-primary-500 mb-4">{service.description}</p>
               <div className="flex flex-wrap gap-2">
                 {service.keywords.split(', ').map((keyword, idx) => (
-                  <span key={idx} className="text-sm bg-primary-100 text-primary-600 px-3 py-1 rounded-full">
+                  <span 
+                    key={idx} 
+                    className="text-xs font-medium px-3 py-1 rounded-full bg-rose-light text-primary-600 border border-rose-dark/20"
+                  >
                     {keyword}
                   </span>
                 ))}
