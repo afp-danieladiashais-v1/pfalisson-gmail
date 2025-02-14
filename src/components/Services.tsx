@@ -1,68 +1,6 @@
 
-import { Scissors, Sparkles, Palette, Wand2, Heart, Zap, Crown, Star, Shield, Droplet, Gauge, Clock, Smile } from "lucide-react";
-
-const services = [
-  {
-    title: "Mechas Exclusivas",
-    description: "Design personalizado de mechas que realçam sua beleza natural. Técnicas inovadoras para um resultado único e duradouro.",
-    icon: Sparkles,
-    keywords: [
-      { text: "Iluminação natural", icon: Star },
-      { text: "Dimensão", icon: Palette },
-      { text: "Personalização", icon: Heart }
-    ]
-  },
-  {
-    title: "Coloração Premium",
-    description: "Cores vibrantes e duradouras com produtos de alta performance. Transforme seu visual com tecnologia de ponta.",
-    icon: Palette,
-    keywords: [
-      { text: "Cobertura perfeita", icon: Shield },
-      { text: "Brilho intenso", icon: Sparkles },
-      { text: "Proteção", icon: Heart }
-    ]
-  },
-  {
-    title: "Ruivos Deslumbrantes",
-    description: "Especialistas em tons ruivos que harmonizam com seu tom de pele. Do cobre suave ao vermelho intenso.",
-    icon: Heart,
-    keywords: [
-      { text: "Tons personalizados", icon: Palette },
-      { text: "Durabilidade", icon: Clock },
-      { text: "Vivacidade", icon: Sparkles }
-    ]
-  },
-  {
-    title: "Alisamento Inteligente",
-    description: "Técnicas avançadas de alisamento que mantêm a saúde dos fios. Resultado natural com máximo cuidado.",
-    icon: Wand2,
-    keywords: [
-      { text: "Sem formol", icon: Shield },
-      { text: "Redução de volume", icon: Droplet },
-      { text: "Proteção", icon: Heart }
-    ]
-  },
-  {
-    title: "Tratamentos VIP",
-    description: "Protocolos exclusivos de tratamento para recuperação e fortalecimento dos fios. Resultados visíveis desde a primeira sessão.",
-    icon: Crown,
-    keywords: [
-      { text: "Hidratação profunda", icon: Droplet },
-      { text: "Reconstrução", icon: Shield },
-      { text: "Nutrição", icon: Heart }
-    ]
-  },
-  {
-    title: "Finalização Expert",
-    description: "Técnicas profissionais de finalização que realçam seu estilo. Aprenda a manter o visual do salão em casa.",
-    icon: Zap,
-    keywords: [
-      { text: "Durabilidade", icon: Clock },
-      { text: "Praticidade", icon: Star },
-      { text: "Estilo", icon: Smile }
-    ]
-  }
-];
+import { services } from "@/data/services";
+import { KeywordTag } from "./ui/keyword-tag";
 
 const Services = () => {
   return (
@@ -82,13 +20,7 @@ const Services = () => {
               <p className="text-primary-500 mb-4">{service.description}</p>
               <div className="flex flex-wrap gap-3">
                 {service.keywords.map((keyword, idx) => (
-                  <div 
-                    key={idx} 
-                    className="flex items-center gap-1 text-primary-500"
-                  >
-                    <keyword.icon className="w-4 h-4" />
-                    <span className="text-sm">{keyword.text}</span>
-                  </div>
+                  <KeywordTag key={idx} keyword={keyword} />
                 ))}
               </div>
             </div>

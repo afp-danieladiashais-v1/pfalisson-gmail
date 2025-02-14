@@ -1,5 +1,23 @@
 
-import { Instagram, Star, Youtube, MessageCircle, Sparkles, Palette, Shield, Heart, Clock, Zap } from "lucide-react";
+import { Sparkles, Palette, Heart, Star, Shield, Clock, Zap, MessageCircle } from "lucide-react";
+import { KeywordTag } from "./ui/keyword-tag";
+import { socialLinks } from "@/data/social";
+
+const footerKeywords = {
+  features: [
+    { text: "Especialista em Mechas", icon: Sparkles },
+    { text: "Coloração Premium", icon: Palette },
+    { text: "Ruivos Naturais", icon: Heart }
+  ],
+  benefits: [
+    { text: "Atendimento VIP", icon: Star },
+    { text: "Resultados Garantidos", icon: Shield }
+  ],
+  social: [
+    { text: "Antes e Depois", icon: Clock },
+    { text: "Dicas de Cabelo", icon: Zap }
+  ]
+};
 
 const Footer = () => {
   return (
@@ -10,18 +28,9 @@ const Footer = () => {
             <h3 className="text-3xl font-serif font-bold text-primary-600 mb-6">Daniela Dias Hair</h3>
             <p className="text-primary-500 mb-4">Transformando visual e autoestima</p>
             <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-1 text-primary-500">
-                <Sparkles className="w-4 h-4" />
-                <span className="text-sm">Especialista em Mechas</span>
-              </div>
-              <div className="flex items-center gap-1 text-primary-500">
-                <Palette className="w-4 h-4" />
-                <span className="text-sm">Coloração Premium</span>
-              </div>
-              <div className="flex items-center gap-1 text-primary-500">
-                <Heart className="w-4 h-4" />
-                <span className="text-sm">Ruivos Naturais</span>
-              </div>
+              {footerKeywords.features.map((keyword, index) => (
+                <KeywordTag key={index} keyword={keyword} />
+              ))}
             </div>
           </div>
           <div>
@@ -39,41 +48,34 @@ const Footer = () => {
               Agende sua transformação e descubra como podemos realçar sua beleza natural
             </p>
             <div className="flex flex-wrap gap-4 mt-4">
-              <div className="flex items-center gap-1 text-primary-500">
-                <Star className="w-4 h-4" />
-                <span className="text-sm">Atendimento VIP</span>
-              </div>
-              <div className="flex items-center gap-1 text-primary-500">
-                <Shield className="w-4 h-4" />
-                <span className="text-sm">Resultados Garantidos</span>
-              </div>
+              {footerKeywords.benefits.map((keyword, index) => (
+                <KeywordTag key={index} keyword={keyword} />
+              ))}
             </div>
           </div>
           <div>
             <h4 className="text-xl font-semibold text-primary-600 mb-6">Redes Sociais</h4>
             <div className="flex space-x-6 mb-6">
-              <a href="https://www.instagram.com/danieladias_hair" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 transition-colors">
-                <Instagram size={28} />
-              </a>
-              <a href="https://www.tiktok.com/@danieladiashair" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 transition-colors">
-                <Star size={28} />
-              </a>
-              <a href="https://www.youtube.com/@DanielaDiasHair" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 transition-colors">
-                <Youtube size={28} />
-              </a>
+              {socialLinks.map((social, index) => (
+                <a 
+                  key={index}
+                  href={social.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-primary-500 hover:text-primary-600 transition-colors"
+                  aria-label={social.label}
+                >
+                  <social.icon size={28} />
+                </a>
+              ))}
             </div>
             <p className="text-primary-500">
               Siga-nos para inspirações, dicas e resultados incríveis
             </p>
             <div className="flex flex-wrap gap-4 mt-4">
-              <div className="flex items-center gap-1 text-primary-500">
-                <Clock className="w-4 h-4" />
-                <span className="text-sm">Antes e Depois</span>
-              </div>
-              <div className="flex items-center gap-1 text-primary-500">
-                <Zap className="w-4 h-4" />
-                <span className="text-sm">Dicas de Cabelo</span>
-              </div>
+              {footerKeywords.social.map((keyword, index) => (
+                <KeywordTag key={index} keyword={keyword} />
+              ))}
             </div>
           </div>
         </div>

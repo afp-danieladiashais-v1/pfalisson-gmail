@@ -1,5 +1,13 @@
 
 import { Sparkles, Palette, Star, Heart } from "lucide-react";
+import { KeywordTag } from "./ui/keyword-tag";
+
+const heroKeywords = [
+  { text: "Expertise em Mechas", icon: Sparkles },
+  { text: "Coloração Profissional", icon: Palette },
+  { text: "Tratamentos Avançados", icon: Star },
+  { text: "Beleza Autêntica", icon: Heart }
+];
 
 const Hero = () => {
   return (
@@ -22,22 +30,9 @@ const Hero = () => {
           Especialistas em técnicas exclusivas que transformam seu cabelo com respeito à sua natureza e personalidade
         </p>
         <div className="flex flex-wrap justify-center gap-6 mb-12">
-          <div className="flex items-center gap-1 text-primary-500">
-            <Sparkles className="w-4 h-4" />
-            <span className="text-sm">Expertise em Mechas</span>
-          </div>
-          <div className="flex items-center gap-1 text-primary-500">
-            <Palette className="w-4 h-4" />
-            <span className="text-sm">Coloração Profissional</span>
-          </div>
-          <div className="flex items-center gap-1 text-primary-500">
-            <Star className="w-4 h-4" />
-            <span className="text-sm">Tratamentos Avançados</span>
-          </div>
-          <div className="flex items-center gap-1 text-primary-500">
-            <Heart className="w-4 h-4" />
-            <span className="text-sm">Beleza Autêntica</span>
-          </div>
+          {heroKeywords.map((keyword, index) => (
+            <KeywordTag key={index} keyword={keyword} />
+          ))}
         </div>
         <a
           href="https://wa.me/5534999659886"
