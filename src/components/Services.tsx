@@ -40,15 +40,17 @@ const Services = () => {
               <service.icon className="w-12 h-12 text-primary-500 mb-6" />
               <h3 className="text-2xl font-semibold mb-4 text-primary-600">{service.title}</h3>
               <p className="text-primary-500 mb-6 leading-relaxed">{service.description}</p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-col items-center space-y-2">
                 {service.keywords.map((keyword, idx) => (
                   <motion.div
                     key={idx}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: idx * 0.1 }}
+                    className="flex items-center gap-2 text-primary-500"
                   >
-                    <KeywordTag keyword={keyword} />
+                    <keyword.icon className="w-4 h-4" />
+                    <span className="text-sm">{keyword.text}</span>
                   </motion.div>
                 ))}
               </div>
