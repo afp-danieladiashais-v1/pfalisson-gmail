@@ -10,7 +10,7 @@ const footerKeywords = {
   ],
   benefits: [
     { text: "Atendimento VIP", icon: Star },
-    { text: "Resultados Garantidos", icon: CheckCircle }
+    { text: "Resultados Garantidos", icon: Shield }
   ],
   social: [
     { text: "Antes e Depois", icon: Clock },
