@@ -1,6 +1,6 @@
 
 import { Service } from "@/types/common";
-import { Sparkles, Palette, Heart, Wand2, Crown, Zap, Star, Shield, Droplet, Clock, Smile } from "lucide-react";
+import { Sparkles, Palette, Heart, Wand2, Crown, Zap, Star, Shield, Droplet, Clock, Smile, Scissors } from "lucide-react";
 
 export const services: Service[] = [
   {
@@ -66,11 +66,11 @@ export const services: Service[] = [
   {
     title: "Corte com Visagismo",
     description: "Análise facial para um corte personalizado com acabamento perfeito e dicas de estilo.",
-    icon: Zap,
+    icon: Scissors,
     keywords: [
-      { text: "Identidade visual", icon: SmilePlus },
-      { text: "Correção de imperfeições", icon: Wand },
-      { text: "Estilo pessoal", icon: Verified }
+      { text: "Identidade visual", icon: Smile },
+      { text: "Correção de imperfeições", icon: Wand2 },
+      { text: "Estilo pessoal", icon: Star }
     ]
   }
 ];
