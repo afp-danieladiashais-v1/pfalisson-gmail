@@ -1,44 +1,78 @@
 
-import { Heart } from "lucide-react";
+import { Star, Quote } from "lucide-react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Maria Silva",
-    text: "Melhor experiência em transformação de cabelo que já tive!",
-    image: "/placeholder.svg"
+    name: "Ana Silva",
+    image: "/placeholder.svg",
+    text: "Transformação incrível! As mechas ficaram exatamente como eu sonhava. A Daniela tem um dom especial.",
+    rating: 5,
   },
   {
-    name: "Ana Santos",
-    text: "Profissionais incríveis e ambiente acolhedor.",
-    image: "/placeholder.svg"
+    name: "Maria Santos",
+    image: "/placeholder.svg",
+    text: "O melhor lugar para cuidar dos cabelos. Profissionalismo e qualidade incomparáveis.",
+    rating: 5,
   },
   {
     name: "Julia Costa",
-    text: "Resultados surpreendentes, super recomendo!",
-    image: "/placeholder.svg"
-  }
+    image: "/placeholder.svg",
+    text: "Ambiente acolhedor e resultados surpreendentes. Recomendo especialmente para quem quer fazer ruivos.",
+    rating: 5,
+  },
 ];
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="section-padding bg-gradient-to-b from-white/80 to-[#FFDEE2]/50">
-      <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
-          O Que Nossas Clientes Dizem
-        </h2>
-        <p className="text-lg text-neutral-600">
-          Histórias reais de transformação e satisfação
-        </p>
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+            O Que Nossas Clientes Dizem
+          </h2>
+          <p className="text-lg text-neutral-600">
+            Histórias reais de transformação e satisfação
+          </p>
+        </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="glass-card p-6">
-              <Heart className="w-8 h-8 text-primary-600 mb-4" />
-              <p className="text-gray-600 mb-4">"{testimonial.text}"</p>
-              <div className="flex items-center">
-                <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full mr-4" />
-                <span className="font-semibold">{testimonial.name}</span>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="bg-neutral-50 p-6 rounded-2xl relative"
+            >
+              <Quote className="absolute top-4 right-4 text-primary/20 w-8 h-8" />
+              <div className="flex items-center mb-4">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-12 h-12 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <h3 className="font-semibold text-neutral-800">{testimonial.name}</h3>
+                  <div className="flex">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-primary text-primary"
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
+              <p className="text-neutral-600">{testimonial.text}</p>
+            </motion.div>
           ))}
         </div>
       </div>
